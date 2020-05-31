@@ -1,0 +1,14 @@
+.header {
+    .nav-menu-header {
+        @include indents-large-width;
+
+        @media (max-width: $table-width) {
+            @include indents-middle-width;
+        }
+
+        @media (max-width: $phone-width) {
+            @include indents-small-width;
+        }
+            
+    }
+}
