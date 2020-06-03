@@ -25,16 +25,31 @@
         font-weight: 500;
         // font-size: rem(18);
         line-height: 24px;
-        color: black;
+        color: black;    
+
+        &-phone {
+            font-weight: bold;
+            color: #43404e;
+            &::before {
+                content: '';
+                display: block;
+                width: 25px;
+                height: 25px;
+                box-sizing: border-box;
+                background: url('./images/ico-phon.png') center / 100% ;
+            }
+        }
         
         &:hover {
             color: #1a1b22;
         }
-
+        
         &__hover-link_white:hover {
             color: #fff;
         }
     }
+    
+    
     
 }
 

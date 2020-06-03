@@ -16,9 +16,69 @@
                 <li class="menu__item menu__item"><a href="#" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
                 <li class="menu__item"><a href="#" class="menu__link menu__hover-link_white">О нас</a></li>
                 <li class="menu__item"><a href="#" class="menu__link menu__hover-link_white">Контакты</a></li>
+                <li class="menu__item"><a href="tel: 89997654321" class="menu__link menu__link-phone">89997654321</a></li>
             </ul>
         </nav>
+        <div class="swiper">
+            <h2 class="swiper-title">Наши услуги</h2>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="services-card">
+                            <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
+                            <div class="services-card__wrapper-text">
+                                <h2 class="services-card__title">Востановление КБМ</h2>
+                                <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
+                                <button class="services-card__button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+
     </header>
+    <main class="content">
+        <section class="calc">
+            <img src="<%=require('./images/raschet.png').default%>" alt="изображение калькулятора" class="calc__image">
+            <div class="calc__button-wrapper">
+                <button class="calc__button calc__button_kasco">Рассчитать ОСАГО</button>
+                    <button class="calc__button calc__button_osago">Рассчитать КАСКО</button>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="about-us__wrapper-text">
+                <h2 class="about-us__title">About us</h2>
+                <p class="about-us__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi doloribus at tenetur, enim aliquam provident reiciendis qui obcaecati hic modi labore alias facere repudiandae
+                    accusamus dolore iure. Ad omnis neque eum! Mollitia natus illum ipsam quaerat porro! Nobis, dolores odio.</p>
+            </div>
+            <img src="<%=require('./images/about-us.png').default%>" alt="" class="about-us__image">
+        </section>
+        <section class="road-map">
+            <ul class="road-map__list">
+                <li class="road-map__item">Начало Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                <li class="road-map__item">Второе</li>
+                <li class="road-map__item">Пятое</li>
+                <li class="road-map__item">Конец</li>
+            </ul>
+            
+        </section>
+    </main>
+    <iframe src="https://calcus.ru/kalkulyator-osago?embed=1&bgcolor=%FFFFFFA&buttoncolor=%232E8B57&region_id=50" frameborder="0" class="calc-form"></iframe>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 </body>
