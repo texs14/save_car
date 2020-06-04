@@ -1,0 +1,91 @@
+.road-map {
+    @include indents-large-width;
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        
+        &::before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 225px;
+            border: 3px solid rgb(122, 122, 122);
+            border-bottom: none;
+            border-radius: 8px 8px 0px 0px;
+            background: rgb(122, 122, 122);
+            position: absolute;
+            // left: 3px;
+            // top: 0;
+            transform: translate(-50%);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 225px;
+            border: 3px solid rgb(122, 122, 122);
+            border-top: none;
+            border-radius: 0px 0px 8px 8px ;
+            background: rgb(122, 122, 122);
+            position: absolute;
+            // left: 3px;
+            // bottom: 0;
+            transform: translate(-50%, -100%);
+        }
+    }
+
+    &__item {
+        border-left: 2px rgb(182, 182, 182) dashed;
+        font-size: 30px;
+        line-height: 80px;
+        height: 80px;
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        // padding-left: 40px;
+
+        // &:first-child::after {
+        //     content: '';
+        //     display: block;
+        //     width: 15px;
+        //     height: 15px;
+        //     border: 3px solid red;
+        //     position: relative;
+        //     left: 0;
+        //     top: 0;
+        // }
+
+        // &:last-child::after {
+        //     content: '';
+        //     display: block;
+        //     width: 15px;
+        //     height: 15px;
+        //     border: 3px solid red;
+        //     position: relative;
+        //     left: 0;
+        //     bottom: 0px;
+        // }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 3px solid rgb(228, 156, 0);
+            background: rgba(228, 167, 0, 0.87);
+            border-radius: 25px;
+            position: relative;
+            left: 0;
+            top: 50%;
+            margin-right: 30px;
+            // transform: translateY(-50%);
+            transform: translate(-55%, -50%);
+        }
+    }
+
+
+}

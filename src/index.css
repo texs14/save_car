@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 /* @import url('./blocks/header.css'); */
 
 body {
     background-image: url('./images/phone-auricular-outline_icon-icons.com_73189.png');
     background: #000;
+=======
+
+body {
+    /* background-image: url('./images/mini.jpg'); */
+    /* background: #000; */
+>>>>>>> f5eb37240297bbd0446ddfafc2d6ad2ed54d1757
 }

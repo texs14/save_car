@@ -6,14 +6,18 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
     margin: auto;
     padding: 0 101px 0 104px;
     height: 80px;
     max-width: 1440px;
     box-sizing: border-box;
     box-shadow: #f0efef 0px 1px 15px;
-    background-color: rgba(255, 255, 255, 0.178);
-    @media (max-width: 768px) {
+    background-color: rgba(255, 255, 255, 0.856);
+}
+
+@media (max-width: 768px) {
+    .nav-menu-header {
         padding: 0 42px 0 40px;
         height: 64px;
     }

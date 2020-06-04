@@ -27,23 +27,23 @@
         // font-size: rem(18);
         line-height: 24px;
         color: black;
+        &-phone {
+            font-weight: bold;
+            color: #43404e;
+            &::before {
+                content: '';
+                display: block;
+                width: 25px;
+                height: 25px;
+                box-sizing: border-box;
+                background: url('./images/ico-phon.png') center / 100%;
+            }
+        }
         &:hover {
             color: #2c2f55;
         }
         &__hover-link_white:hover {
             color: #fff;
-        }
-    }
-    &__phone {
-        color: rgb(87, 87, 87);
-        font-weight: bold;
-        &::before {
-            content: '';
-            display: block;
-            width: 38px;
-            height: 38px;
-            // background-image: url('../images/css.png');
-            background-size: contain 100%;
         }
     }
 }

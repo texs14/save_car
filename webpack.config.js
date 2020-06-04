@@ -37,6 +37,7 @@ module.exports = {
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
+<<<<<<< HEAD
                     {
                         loader: 'css-loader',
                         // options: { sourceMap: true }
@@ -50,6 +51,21 @@ module.exports = {
                 ]
             },
             {
+=======
+                  {
+                      loader: 'css-loader',
+                    // options: { sourceMap: true }
+                }, {
+                    loader: 'postcss-loader',
+                    // options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                }, {
+                    loader: 'sass-loader',
+                    // options: { sourceMap: true }
+                }
+            ]
+        },
+        {
+>>>>>>> f5eb37240297bbd0446ddfafc2d6ad2ed54d1757
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -74,9 +90,9 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name]/[name].[contenthash].css'
+            filename: '[name].[contenthash].css'
         }),
-
+        
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),

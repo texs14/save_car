@@ -3,10 +3,16 @@
 @import './scss/blocks/menu';
 @import './scss/blocks/logo';
 @import './scss/blocks/nav-menu-header';
+@import './scss/blocks/services-card';
+@import './scss/blocks/calc';
+@import './scss/blocks/content';
+@import './scss/blocks/about-us';
+@import './scss/blocks/road-map';
+@import './scss/blocks/calc-form';
+@import '../node_modules/swiper/swiper';
+@import './vendor/mySwiper';
 html,
 body {
     margin: 0;
     padding: 0;
-    // background-image: url('../images/css.png');
-    background-repeat: repeat;
 }
