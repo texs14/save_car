@@ -13,9 +13,9 @@
         <nav class="nav-menu-header nav-menu-header_theme_white">
             <h1 class="logo">Автострахование</h1>
             <ul class="menu menu_theme_white">
-                <li class="menu__item menu__item"><a href="#" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
-                <li class="menu__item"><a href="#" class="menu__link menu__hover-link_white">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link menu__hover-link_white">Контакты</a></li>
+                <li class="menu__item menu__item"><a href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
+                <li class="menu__item"><a href="#about-us" class="menu__link menu__hover-link_white">О нас</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
                 <li class="menu__item"><a href="tel: 89997654321" class="menu__link menu__link-phone">89997654321</a></li>
             </ul>
         </nav>
@@ -35,8 +35,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">
+                        <div class="services-card">
+                            <div class="services-card__wrapper-text">
+                                <h2 class="services-card__title">Востановление КБМ</h2>
+                                <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
+                                <button class="services-card__button">Подробнее</button>
+                            </div>
+                            <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-card">
+                            <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
+                            <div class="services-card__wrapper-text">
+                                <h2 class="services-card__title">Востановление КБМ</h2>
+                                <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
+                                <button class="services-card__button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-card">
+                            <div class="services-card__wrapper-text">
+                                <h2 class="services-card__title">Востановление КБМ</h2>
+                                <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
+                                <button class="services-card__button">Подробнее</button>
+                            </div>
+                            <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
+                        </div>
+                    </div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -52,6 +80,7 @@
 
     </header>
     <main class="content">
+        <a name="calc" style="padding-top: 80px;"></a>
         <section class="calc">
             <img src="<%=require('./images/raschet.png').default%>" alt="изображение калькулятора" class="calc__image">
             <div class="calc__button-wrapper">
@@ -59,6 +88,7 @@
                 <button class="calc__button calc__button_osago">Рассчитать КАСКО</button>
             </div>
         </section>
+        <a name="about-us" style="padding-top: 85px;"></a>
         <section class="about-us">
             <div class="about-us__wrapper-text">
                 <h2 class="about-us__title">About us</h2>
@@ -68,6 +98,7 @@
             <img src="<%=require('./images/about-us.png').default%>" alt="" class="about-us__image">
         </section>
         <section class="road-map">
+            <h2 class="road-map__title">СХЕМА РАБОТЫ</h2>
             <ul class="road-map__list">
                 <li class="road-map__item">Начало Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
                 <li class="road-map__item">Второе</li>
@@ -76,7 +107,37 @@
             </ul>
 
         </section>
+        <a name="contacts" style="padding-top: 85px;"></a>
+        <section class="contacts">
+            <h2 class="contacts__title">Контактная информация</h2>
+            <div class="contacts__wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A125cd42b772acb9f68327db849a0947acc6b8b8193570cf59c7c3a63c87ec2f2&amp;source=constructor" width="45%" height="443" frameborder="0"></iframe>
+                <ul class="contacts__list">
+                    <li class="contacts__item">Одинцово, Новая Трехгорка, ул. Кутузовская д.31</li>
+                    <li class="contacts__item contacts__item-messenger">8-926-603-87-65</li>
+                    <li class="contacts__item contacts__item-messenger">8-926-522-90-99</li>
+                    <li class="contacts__item">ОГРН/ОГРНИП 5137746104773</li>
+                </ul>
+            </div>
+            <!-- <ul class="contacts__list">
+                <li class="contacts__item"></li>
+                <li class="contacts__item"></li>
+                <li class="contacts__item"></li>
+                <li class="contacts__item"></li>
+            </ul> -->
+        </section>
     </main>
+    <footer class="footer">
+        <nav class="nav-menu-footer">
+            <h1 class="logo">Автострахование</h1>
+            <ul class="menu menu_theme_white">
+                <li class="menu__item menu__item"><a href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
+                <li class="menu__item"><a href="#about-us" class="menu__link menu__hover-link_white">О нас</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
+                <li class="menu__item"><a href="tel: 89997654321" class="menu__link menu__link-phone">89997654321</a></li>
+            </ul>
+        </nav>
+    </footer>
     <iframe src="https://calcus.ru/kalkulyator-osago?embed=1&bgcolor=%FFFFFFA&buttoncolor=%232E8B57&region_id=50" frameborder="0" class="calc-form"></iframe>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>

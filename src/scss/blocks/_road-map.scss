@@ -1,5 +1,11 @@
 .road-map {
     @include indents-large-width;
+
+    &__title {
+        margin: 0 0 40px 0;
+        text-align: center;
+    }
+
     &__list {
         margin: 0;
         padding: 0;

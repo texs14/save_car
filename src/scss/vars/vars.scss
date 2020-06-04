@@ -1,6 +1,9 @@
+
+// Переменные шрифтов
 $paragraph-font-size     : 18px;
 
 
+// Разрешения экранов
 $desktop-width            : 1280px;
 $smDesktop-width          : 1024px;
 $table-width              : 768px;
@@ -8,35 +11,38 @@ $smTable-width            : 640px;
 $phone-width              : 480px;
 $smPhone-width            : 320px;
 
+// Высота меню
+$height-menu              : 80px;
+
 @mixin indents-large-width {
-    padding: {
-        left: 58px;
-        right: 58px;
-    };
-    margin: auto;
+	padding: {
+		left: 58px;
+		right: 58px;
+	};
+	margin: auto;
 }
 
 @mixin indents-middle-width {
-    padding: {
-        left: 38px;
-        right: 38px;
-    };
-    margin: auto;
+	padding: {
+		left: 38px;
+		right: 38px;
+	};
+	margin: auto;
 }
 
 @mixin indents-small-width {
-    padding: {
-        left: 18px;
-        right: 18px;
-    };
-    margin: auto;
+	padding: {
+		left: 18px;
+		right: 18px;
+	};
+	margin: auto;
 }
 
 @mixin primary-font {
-    font: {
-        family: 'Arial', sans-serif;
-        size: 25px;
-    }
+	font: {
+		family: 'Arial', sans-serif;
+		size: 25px;
+	}
 }
 
 // @function rem($pixels, $context: $mainFontSize) {

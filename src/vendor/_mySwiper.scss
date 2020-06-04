@@ -8,7 +8,7 @@
 }
 
 .swiper-container {
-    width: 50%;
+    max-width: 50%;
     height: 288px;
     overflow: hidden;
     position: static;
@@ -34,7 +34,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    background: #1a1b22bb;
+    background: rgba(26, 27, 34, 0.623);
     box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.2);
     width: 40px;
     height: 40px;
@@ -50,7 +50,11 @@
 .swiper-button-prev::before {
     content: "";
     display: block;
-    // background: url(../../../src/images/Path5.svg);
+    position: relative;
+    top: 34%;
+    left: 39%;
+    
+    background: url('./images/arrow.png') ;
     background-repeat: no-repeat;
     background-size: contain;
     width: 10px;
@@ -58,7 +62,7 @@
 }
 
 .swiper-button-prev::before {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateX(40%);
 }
 
 .swiper-button-next {
