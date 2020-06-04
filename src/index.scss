@@ -1,11 +1,12 @@
-@import  './scss/vars/vars';
-@import  './scss/blocks/header';
-@import  './scss/blocks/menu';
-@import  './scss/blocks/logo';
-@import  './scss/blocks/nav-menu-header';
-
-html, body {
+@import './scss/vars/vars';
+@import './scss/blocks/header';
+@import './scss/blocks/menu';
+@import './scss/blocks/logo';
+@import './scss/blocks/nav-menu-header';
+html,
+body {
     margin: 0;
     padding: 0;
+    // background-image: url('../images/css.png');
+    background-repeat: repeat;
 }
-

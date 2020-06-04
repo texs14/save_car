@@ -18,38 +18,37 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: [
-                  'style-loader',
-                  MiniCssExtractPlugin.loader,
-                  {
-                    loader: 'css-loader',
-                    // options: { sourceMap: true }
-                  }, {
-                    loader: 'postcss-loader',
-                    // options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
-                  }
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        // options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        // options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                    }
                 ]
             },
             {
                 test: /\.scss$/,
                 use: [
-                  'style-loader',
-                  MiniCssExtractPlugin.loader,
-                  {
-                    loader: 'css-loader',
-                    // options: { sourceMap: true }
-                  }, {
-                    loader: 'postcss-loader',
-                    // options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
-                  }, {
-                    loader: 'sass-loader',
-                    // options: { sourceMap: true }
-                  }
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        // options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        // options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                    }, {
+                        loader: 'sass-loader',
+                        // options: { sourceMap: true }
+                    }
                 ]
-           },
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -60,7 +59,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=./images/[name].[ext]',
+                    'file-loader?name=[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {}
