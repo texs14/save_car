@@ -2,11 +2,15 @@
 // Переменные шрифтов
 $paragraph-font-size     : 18px;
 
+$title-font-size		 : 34px;
+
+$subtitle-font-size      : 24px;
+
 
 // Разрешения экранов
 $desktop-width            : 1280px;
 $smDesktop-width          : 1024px;
-$table-width              : 768px;
+$table-width              : 850px;
 $smTable-width            : 640px;
 $phone-width              : 480px;
 $smPhone-width            : 320px;
@@ -41,8 +45,13 @@ $height-menu              : 80px;
 @mixin primary-font {
 	font: {
 		family: 'Arial', sans-serif;
-		size: 25px;
+		size: 18px;
 	}
+}
+
+@mixin title {
+	font-size: $title-font-size;
+	margin: 0 0 40px;
 }
 
 // @function rem($pixels, $context: $mainFontSize) {

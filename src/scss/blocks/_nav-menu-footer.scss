@@ -3,4 +3,11 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1115px) {
+    .nav-menu-footer {
+        padding: 0 30px;
+    }
 }

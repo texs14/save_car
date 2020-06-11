@@ -1,0 +1,40 @@
+.partners {
+    width: 100%;
+    position: relative;
+    background-color: rgb(244, 245, 246);
+
+    &__title {
+        font-size: $title-font-size;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 670px) {
+    .partners {
+    
+        &__title {
+            font-size: $title-font-size - 5;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .partners {
+        &__title {
+            font-size: $title-font-size - 10;
+            margin-top: 30px;
+        }
+    }
+}

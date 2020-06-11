@@ -1,13 +1,13 @@
 .calc {
-    max-width: 1440px;
-    padding-top: 80px; // Вставить переменную "высота меню"
-    display: flex;
-    justify-content: space-evenly;
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
 
     &__image {
         width: 350px;
         height: 350px;
-        border-radius: 100px;
     }
 
     &__button-wrapper {
@@ -18,7 +18,7 @@
     }
 
     &__button {
-        margin:  0 0 30px 0;
+        margin:  30px 0;
         min-width: 350px;
         height: 40px;
 
@@ -32,7 +32,7 @@
         color: rgb(255, 255, 255);
 
         &:last-child {
-            margin-bottom: 0;
+            margin: 0;
         }
         
         &:hover {
@@ -43,4 +43,35 @@
         }
     }
 
+}
+
+@media (max-width: 750px) {
+    .calc {
+        &__wrapper {
+            flex-flow: column;
+            align-items: center;
+        }
+        
+    }
+}
+
+@media (max-width: 410px) {
+    .calc {
+        &__wrapper {
+            padding: 30px 12px;
+        }
+
+        &__button-wrapper {
+            width: 100%;
+        }
+
+        &__button {
+            min-width: 100%;
+        }
+
+        &__image {
+            width: 295px;
+            height: 295px;
+        }
+    }
 }

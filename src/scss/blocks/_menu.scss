@@ -5,7 +5,6 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    max-width: 50%;
     &__item {
         display: flex;
         margin-right: 34px;
@@ -47,6 +46,47 @@
         }
     }
 }
+
+@media (max-width: 1115px) {
+    .menu {
+
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 945px) {
+    .menu {
+        justify-content: space-evenly;
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: $table-width) {
+    .menu {
+        font-size: $paragraph-font-size - 4;
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .menu {
+        display: none;
+        flex-flow: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        &__item {
+            margin-right: 0;
+        }
+    }
+}
+
 
 @media (max-width: $phone-width) {
     .menu__item {

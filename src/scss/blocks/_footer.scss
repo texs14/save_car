@@ -3,3 +3,13 @@
     // display: flex;
     margin: 80px auto 0 auto;
 }
+
+@media (max-width: 670px) {
+    .footer {
+
+        .nav-menu-footer {
+            padding: 0 12px;
+        }
+
+    }
+}

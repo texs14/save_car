@@ -1,10 +1,8 @@
 .road-map {
     @include indents-large-width;
-
-    &__title {
-        margin: 0 0 40px 0;
-        text-align: center;
-    }
+    margin: 0;
+    align-self: flex-start;
+    box-sizing: border-box;
 
     &__list {
         margin: 0;
@@ -22,8 +20,6 @@
             border-radius: 8px 8px 0px 0px;
             background: rgb(122, 122, 122);
             position: absolute;
-            // left: 3px;
-            // top: 0;
             transform: translate(-50%);
         }
 
@@ -37,8 +33,6 @@
             border-radius: 0px 0px 8px 8px ;
             background: rgb(122, 122, 122);
             position: absolute;
-            // left: 3px;
-            // bottom: 0;
             transform: translate(-50%, -100%);
         }
     }
@@ -46,35 +40,11 @@
     &__item {
         border-left: 2px rgb(182, 182, 182) dashed;
         font-size: 30px;
-        line-height: 80px;
         height: 80px;
         display: flex;
+        align-items: center;
         position: relative;
         z-index: 2;
-
-        // padding-left: 40px;
-
-        // &:first-child::after {
-        //     content: '';
-        //     display: block;
-        //     width: 15px;
-        //     height: 15px;
-        //     border: 3px solid red;
-        //     position: relative;
-        //     left: 0;
-        //     top: 0;
-        // }
-
-        // &:last-child::after {
-        //     content: '';
-        //     display: block;
-        //     width: 15px;
-        //     height: 15px;
-        //     border: 3px solid red;
-        //     position: relative;
-        //     left: 0;
-        //     bottom: 0px;
-        // }
 
         &::before {
             content: '';
@@ -86,12 +56,40 @@
             border-radius: 25px;
             position: relative;
             left: 0;
-            top: 50%;
+            top: 0;
             margin-right: 30px;
-            // transform: translateY(-50%);
-            transform: translate(-55%, -50%);
+            transform: translate(-55%, -0%);
         }
     }
+}
+
+@media (max-width: 768px) {
+    .road-map {
+        margin-top: 30px;
+        padding: 0;
+        
+        &__item {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .road-map {
+        padding-left: 12px;
+        
+        &__item {
+            font-size: 20px;
+        }
+    }
+}
 
 
+@media (max-width: 410px) {
+    .road-map {
+        
+        &__title {
+            font-size: $title-font-size - 10;
+        }
+    }
 }

@@ -1,3 +1,12 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@import './vendor/fonts/fonts';
+
 @import './scss/vars/vars';
 @import './scss/blocks/header';
 @import './scss/blocks/menu';
@@ -7,18 +16,20 @@
 @import './scss/blocks/calc';
 @import './scss/blocks/content';
 @import './scss/blocks/about-us';
+@import './scss/blocks/we-work';
+@import './scss/blocks/_partners';
 @import './scss/blocks/road-map';
+@import './scss/blocks/feedback';
 @import './scss/blocks/contacts';
 @import './scss/blocks/footer';
 @import './scss/blocks/nav-menu-footer';
 @import './scss/blocks/calc-form';
+@import './scss/blocks/popup';
+@import './scss/blocks/button-menu';
 @import '../node_modules/swiper/swiper';
 @import './vendor/mySwiper';
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
+
+
 
 section {
     // height: 90vh;

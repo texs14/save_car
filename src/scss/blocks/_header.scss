@@ -2,17 +2,53 @@
     .nav-menu-header {
         @include indents-large-width;
 
-        @media (max-width: $table-width) {
-            @include indents-middle-width;
-        }
-
-        @media (max-width: $phone-width) {
-            @include indents-small-width;
-        }
+        
             
     }
 
     .swiper {
         margin: 160px auto 0 auto;
+    }
+}
+
+@media (max-width: 1115px) {
+    .header {
+
+        .nav-menu-header {
+            padding: 0 30px;
+        }
+
+    }
+}
+
+
+@media (max-width: $table-width) {
+
+    .nav-menu-header {
+        @include indents-middle-width;
+    }
+}
+
+@media (max-width: 670px) {
+    .header {
+
+        .nav-menu-header {
+            padding: 0 12px;
+        }
+
+    }
+}
+
+@media (max-width: $phone-width) {
+    .nav-menu-header {
+        @include indents-small-width;
+    }
+}
+
+@media (max-width: 410px) {
+    .header {
+        .swiper {
+            margin-top: 100px;        
+        }
     }
 }
