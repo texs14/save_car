@@ -10,11 +10,11 @@
 
 <body>
     <header class="header">
-        <nav class="nav-menu-header nav-menu-header_theme_white">
+        <nav class="nav-menu-header">
             <h1 class="logo">Автострахование</h1>
             <button class="button-menu">
             </button>
-            <ul class="menu menu_theme_white">
+            <ul class="menu">
                 <li class="menu__item menu__item"><a href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
                 <li class="menu__item"><a href="#about-us" class="menu__link menu__hover-link_white">О нас</a></li>
                 <li class="menu__item"><a href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
@@ -28,7 +28,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <div class="services-card">
+                        <div class="services-card" id="serviceCardRestoration">
                             <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
                             <h2 class="services-card__title">Востановление КБМ</h2>
                             <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="services-card">
+                        <div class="services-card" id="serviceCardSaveAuto">
                             <img src="<%=require('./images/save_auto.png').default%>" alt="востановление" class="services-card__image">
                             <h2 class="services-card__title">Востановление КБМ</h2>
                             <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="services-card">
+                        <div class="services-card" id="serviceCardSaveHouse">
                             <img src="<%=require('./images/save_life.png').default%>" alt="востановление" class="services-card__image">
                             <h2 class="services-card__title">Востановление КБМ</h2>
                             <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="services-card">
+                        <div class="services-card" id="serviceCardSaveLife">
                             <img src="<%=require('./images/save_house.png').default%>" alt="востановление" class="services-card__image">
                             <h2 class="services-card__title">Востановление КБМ</h2>
                                 <p class="services-card__description">Мы вам то-то то-то... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, itaque?</p>
@@ -79,8 +79,8 @@
             <div class="calc__wrapper">
                 <img src="<%=require('./images/raschet.png').default%>" alt="изображение калькулятора" class="calc__image">
                 <div class="calc__button-wrapper">
-                    <button class="calc__button calc__button_kasco">Рассчитать ОСАГО</button>
-                    <button class="calc__button calc__button_osago">Рассчитать КАСКО</button>
+                    <button class="calc__button calc__button_osago">Рассчитать ОСАГО</button>
+                    <button class="calc__button calc__button_kasco">Рассчитать КАСКО</button>
                 </div>
             </div>
         </section>
@@ -145,21 +145,23 @@
                 </div>
                 <div class="feedback">
                     <h2 class="feedback__title"> Напишите нам</h2>
-                    <form action="/" class="feedback_form" method="POST">
-                        <label for="email" class="feedback__label feedback__label_input" require>
-                            <input placeholder=" YourEmail@gmail.com" type="email" name="email" id="email" class="feedback__input">
+                    <form action="/" class="feedback__form" method="POST">
+                        <label for="email" class="feedback__label feedback__label_input require" id="labelEmail">
+                            <input placeholder=" YourEmail@gmail.com" type="email" name="email" id="email" class="feedback__input" require>
                             <span class="feedback__lable-name">
                                 Emal
                             </span> 
+                            <span class="error-massege" id="error-email">Хуйня какая-то</span>
                         </label>
-                        <label for="phone" class="feedback__label feedback__label_input">
+                        <label for="phone" class="feedback__label feedback__label_input" id="labelPhone">
                             <input placeholder=" +79998765432" type="tel" name="tel" id="phone" class="feedback__input"> 
                             <span class="feedback__lable-name">
                                 Номер телефона
                             </span> 
+                            <span class="error-massege" id="error-phone">Хуйня какая-то</span>
                         </label>
                         <label for="call" class="feedback__label feedback__label_checkbox">
-                            <input type="checkbox" name="call" class="feedback__checkbox"> Заказать обратный звонок
+                            <input type="checkbox" id="call" name="call" class="feedback__checkbox"> Заказать обратный звонок
                         </label>
                         <p class="feedback__paragraph">поставьте галочку и мы вам перезвоним</p>
                         <textarea placeholder="Введите сообщение..." cols="30" rows="10" name="message" class="feedback__textarea" require></textarea>
@@ -168,7 +170,7 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="popup">
+        <div class="popup" style="display: none;">
             <div class="popup__content">
                 <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
                 <h2 class="popup__title"> Описание услуги</h2>
@@ -176,22 +178,17 @@
                      inventore aliquam perspiciatis vero excepturi quos commodi rerum natus dicta est, id voluptas, aliquid sint laudantium doloremque cupiditate,
                      veniam perferendis pariatur quo reprehenderit asperiores. Voluptatum magni quibusdam hic facilis nam..</p>
             </div>
-        </div> -->
+        </div>
         
-        <!-- <div class="popup">
-            <div class="popup__content">
-                <iframe src="https://calcus.ru/kalkulyator-osago?embed=1&bgcolor=%FFFFFFA&buttoncolor=%232E8B57&region_id=50" frameborder="0" class="calc-form"></iframe>
-            </div>
-        </div> -->
+        <div class="popup-calc">
+                <iframe src="https://calcus.ru/kalkulyator-osago?embed=1&bgcolor=%FFFFFFA&buttoncolor=%232E8B57&region_id=50" frameborder="0" class="popup-calc__content calc-form"></iframe>
+        </div>
     </main>
     <footer class="footer">
         <nav class="nav-menu-footer">
             <h1 class="logo">Автострахование</h1>
             <ul class="menu menu_theme_white">
-                <!-- <li class="menu__item menu__item"><a href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
-                <li class="menu__item"><a href="#about-us" class="menu__link menu__hover-link_white">О нас</a></li>
-                <li class="menu__item"><a href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
-                <li class="menu__item"><a href="tel: 89997654321" class="menu__link menu__link-phone">89997654321</a></li> -->
+
             </ul>
         </nav>
     </footer>

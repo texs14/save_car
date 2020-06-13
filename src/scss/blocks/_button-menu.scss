@@ -11,6 +11,7 @@
     margin-left: 20px;
     outline: none;
     margin-left: auto;
+    transition: 0.8s;
     cursor: pointer;
 
     &::before {
@@ -25,6 +26,10 @@
     &::before {
         top: 0;
         left: -6px;
+    }
+
+    &__open {
+        transform: rotate(90deg);
     }
 
     @media (max-width: 590px) {

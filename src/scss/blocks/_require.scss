@@ -1,0 +1,9 @@
+.require {
+    &::after {
+        content:"*";
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 30px;
+        color: rgb(173, 0, 144);
+    }
+}

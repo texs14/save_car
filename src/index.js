@@ -3,58 +3,64 @@ import './index.scss';
 
 
 import './vendor/mySwiper';
-
-// const form = document.querySelector('.feedback');
-
-// const ajaxSend = (formData) => {
-    
-//     fetch('../main.php', { // файл-обработчик 
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/x-www-form-urlencoded', // отправляемые данные 
-//         },
-//         body: formData
-//     })
-//     .then(response => {
-//         console.log('Сообщение отправлено методом fetch');
-//     })
-//     .catch(error => console.error(error))
-// };
+import Form from './js/components/Form';
+import Popup from './js/components/Popup';
+import PopupCalc from './js/components/PopupCalc';
+import PopupService from './js/components/PopupService';
 
 
-// const forms = document.getElementsByTagName('form');
+import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo} from './js/constants/constants';
 
-// for (let i = 0; i < forms.length; i++) {
-//     forms[i].addEventListener('submit', function (e) {
-//         e.preventDefault();
-//         const formData = new FormData(form);
-//         console.log(formData);
-//         for (let key of formData.keys()) {
-//             console.log(`${key}: ${formData.get(key)}`);
-//         };
-//         ajaxSend(formData);
-//         this.reset(); // очищаем поля формы 
-//     });
-// };
+
+const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
+const popupCalc = new PopupCalc(popupOsago);
+const popupService = new PopupService(popupInfo);
+
+form.send();
+form.requireInput();
+
+
+buttonCalcOsago.addEventListener('click', e => {
+    popupCalc.show();
+});
+
+popupOsago.addEventListener('click', e => {
+    if(e.target.classList.value === `popup` || `popup__content`) {
+        popupCalc.hidden();
+    }
+});
 
 
 
+buttonMenu.addEventListener('click', e => {
+    menu.classList.toggle('menu__open');
+    buttonMenu.classList.toggle('button-menu__open');
+});
 
-    const ajaxSend = (formData) => {
-        fetch('../main.php', { // файл-обработчик 
-            method: 'POST',
-            body: formData
-        })
-            .then(response => console.log('Сообщение отправлено методом fetch'))
-            .catch(error => console.error(error))
-    };
 
-    const forms = document.getElementsByTagName('form');
-    for (let i = 0; i < forms.length; i++) {
-        forms[i].addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            ajaxSend(formData);
-            this.reset(); // очищаем поля формы 
-        });
-    };
+const card = document.querySelector('.swiper-wrapper');
+console.log(card);
+
+card.addEventListener('click', e => {
+    console.log(e.target.type);
+    if (e.target.type === `submit`) {
+        switch (e.target.closest('div').id) {
+            case 'serviceCardRestoration' :
+                popupService.show();
+                break;
+            case 'serviceCardSaveAuto' :
+                alert(2);
+                break;
+            case 'serviceCardSaveHouse' :
+                alert(3);
+                break;
+            case '' :
+                break;
+        }
+    }
+    // popupService._renderContent(e);
+});
+
+popupInfo.addEventListener('click', e => {
+    popupService.hidden();
+});
