@@ -13,7 +13,7 @@ module.exports = {
         index: './src/index.js'
     },
     output: {
-        path: path.resolve( __dirname, 'D:/openserver/domains/localhost'),
+        path: path.resolve( __dirname, 'build' ),
         filename: '[name]/[name].[chunkhash].js'
     },
 
