@@ -15,18 +15,16 @@
             <button class="button-menu">
             </button>
             <ul class="menu">
-                <li class="menu__item menu__item"><a href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
-                <li class="menu__item"><a href="#about-us" class="menu__link menu__hover-link_white">О нас</a></li>
-                <li class="menu__item"><a href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
+                <li class="menu__item menu__item"><a id="linkCalc" href="#calc" class="menu__link menu__link_active_white">Калькулятор ОСАГО</a></li>
+                <li class="menu__item"><a  id="linkAbout" href="#about" class="menu__link menu__hover-link_white">О нас</a></li>
+                <li class="menu__item"><a id="linkContacts" href="#contacts" class="menu__link menu__hover-link_white">Контакты</a></li>
                 <li class="menu__item"><a href="tel: 89997654321" class="menu__link menu__link-phone">89997654321</a></li>
             </ul>
         </nav>
         <div class="swiper">
             <h2 class="swiper-title">Наши услуги</h2>
             <div class="swiper-container">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="services-card" id="serviceCardRestoration">
                             <img src="<%=require('./images/restore.png').default%>" alt="востановление" class="services-card__image">
@@ -60,21 +58,18 @@
                         </div>
                     </div>
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
         </div>
 
     </header>
     <main class="content">
-        <a name="calc"></a>
+        <a name="calc" style="padding-top: 70px;"></a>
         <section class="calc">
             <div class="calc__wrapper">
                 <img src="<%=require('./images/raschet.png').default%>" alt="изображение калькулятора" class="calc__image">
@@ -84,8 +79,8 @@
                 </div>
             </div>
         </section>
-        <a name="about-us" ></a>
-        <section class="about-us">
+        <a name="about" style="padding-top: 70px;"></a>
+        <section class="about-us" >
             <div class="road-map">
                 <h2 class="about-us__title">Схема работы</h2>
                 <ul class="road-map__list">
@@ -130,8 +125,8 @@
             </div>
         </section>
         
-        <a name="contacts" style="padding-top: 85px;"></a>
-        <section class="contacts">
+        <a name="contacts" style="padding-top: 70px;"></a>
+        <section class="contacts" >
             <h2 class="contacts__title">Контактная информация</h2>
             <div class="contacts__wrapper-blocks">
                 <div class="contacts__wrapper-map">
