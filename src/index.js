@@ -4,12 +4,19 @@ import './index.scss';
 
 import './vendor/mySwiper';
 import Form from './js/components/Form';
-import Popup from './js/components/Popup';
 import PopupCalc from './js/components/PopupCalc';
 import PopupService from './js/components/PopupService';
 
-
-import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo} from './js/constants/constants';
+import {
+        formFeedback,
+        ERRORS_MASSEGE,
+        REG_EXS,
+        buttonMenu,
+        menu,
+        buttonCalcOsago,
+        popupOsago,
+        popupInfo,
+    } from './js/constants/constants';
 
 
 const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
@@ -30,8 +37,6 @@ popupOsago.addEventListener('click', e => {
     }
 });
 
-
-
 buttonMenu.addEventListener('click', e => {
     menu.classList.toggle('menu__open');
     buttonMenu.classList.toggle('button-menu__open');
@@ -39,10 +44,8 @@ buttonMenu.addEventListener('click', e => {
 
 
 const card = document.querySelector('.swiper-wrapper');
-console.log(card);
 
 card.addEventListener('click', e => {
-    console.log(e.target.type);
     if (e.target.type === `submit`) {
         switch (e.target.closest('div').id) {
             case 'serviceCardRestoration' :
