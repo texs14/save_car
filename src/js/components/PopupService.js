@@ -5,11 +5,6 @@ export default class PopupService extends Popup {
         super(elem);
     }
 
-    _renderContent({target}) {
-        
-            
-    }
-
     show() {
         this.open();
     }

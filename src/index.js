@@ -7,16 +7,8 @@ import Form from './js/components/Form';
 import PopupCalc from './js/components/PopupCalc';
 import PopupService from './js/components/PopupService';
 
-import {
-        formFeedback,
-        ERRORS_MASSEGE,
-        REG_EXS,
-        buttonMenu,
-        menu,
-        buttonCalcOsago,
-        popupOsago,
-        popupInfo,
-    } from './js/constants/constants';
+
+import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo} from './js/constants/constants';
 
 
 const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
@@ -37,6 +29,8 @@ popupOsago.addEventListener('click', e => {
     }
 });
 
+
+
 buttonMenu.addEventListener('click', e => {
     menu.classList.toggle('menu__open');
     buttonMenu.classList.toggle('button-menu__open');
@@ -44,6 +38,7 @@ buttonMenu.addEventListener('click', e => {
 
 
 const card = document.querySelector('.swiper-wrapper');
+
 
 card.addEventListener('click', e => {
     if (e.target.type === `submit`) {
