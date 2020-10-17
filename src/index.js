@@ -44,7 +44,7 @@ card.addEventListener('click', e => {
     if (e.target.type === `submit`) {
         switch (e.target.closest('div').id) {
             case 'serviceCardRestoration' :
-                popupService.show();
+                popupService.open();
                 break;
             case 'serviceCardSaveAuto' :
                 alert(2);

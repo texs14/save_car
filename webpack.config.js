@@ -90,11 +90,11 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        // new HtmlWebpackPlugin({
-        //     inject: false,
-        //     template: './src/about/about.html',
-        //     filename: 'about.html'
-        // }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/blog.html',
+            filename: 'blog.html'
+        }),
         // new HtmlWebpackPlugin({
         //     inject: false,
         //     template: './src/analytics/analytics.html',

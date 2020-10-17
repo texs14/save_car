@@ -1,12 +1,17 @@
+.service {
+    margin: auto;
+    margin-top: 100px;
+}
+
 .services-card {
     padding: 0  35px;
     box-sizing: border-box;
     // width: 50%;
-    height: 100%;
+    height: 300px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     &__image {
         // width: 100px;
@@ -14,16 +19,17 @@
     }
 
     &__title {
-        margin: 0;
+        margin: 20px 0 auto;
         text-align: center;
     }
 
     &__description {
         text-align: center;
+        margin: 0;
+        margin-bottom: auto;
     }
 
     &__button {
-        margin: auto;
         display: block;
 
         width: 50%;
