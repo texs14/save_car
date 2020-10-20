@@ -1,0 +1,45 @@
+.calc-title {
+    margin-top: 100px;
+}
+
+.calc-iframe {
+    width: 100%;
+    min-height: 936px;
+    border: none;
+}
+
+
+@media(max-width: 685px) {
+    .calc-iframe {
+        min-height: 1150px;
+    }
+    
+}
+
+@media(max-width: 590px) {
+    .calc-iframe {
+        min-height: 1180px;
+    }
+    
+}
+
+@media(max-width: 540px) {
+    .calc-iframe {
+        min-height: 1220px;
+    }
+    
+}
+
+@media(max-width: 450px) {
+    .calc-iframe {
+        min-height: 1290px;
+    }
+    
+}
+
+@media(max-width: 380px) {
+    .calc-iframe {
+        min-height: 1380px;
+    }
+    
+}
