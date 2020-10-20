@@ -1,3 +1,11 @@
+.commentlist, #comments, .navigation{
+    background-color: rgb(244, 245, 246);
+    box-sizing: border-box;
+    margin: 0;
+}
+#comments {
+    padding: 20px 0;
+}
 .post {
 
     margin: auto;
@@ -16,9 +24,10 @@
     }
 
     .comment-respond {
-        p {
-            // width: 1440px;
-        }
+        padding: 100px 0;
+        box-sizing: border-box;
+
+        background-color: rgb(244, 245, 246);
 
         input[type=submit] {
             width: 50%;
@@ -49,6 +58,35 @@
                 border-radius: 45px;
                 border: 2px solid rgba(3, 152, 211, 0.479);
             }
+        }
+    }
+}
+
+
+@media(min-width: 1440px) {
+    .commentlist, #comments, .navigation {
+        width: 100vw;
+        position: relative;
+        left: calc((101vw - 1440px) / 2 * -1);
+
+        padding-left: calc((101vw - 1440px) / 2 );
+        padding-right: calc((101vw - 1440px) / 2 );
+    }
+    
+    .commentlist {
+        padding-left: calc((101vw - 1350px) / 2 );
+        padding-right: calc((101vw - 1350px) / 2 );
+    }
+
+    .post {
+        position: relative;
+        .comment-respond {
+            width: 100vw;
+            position: relative;
+            left: calc((101vw - 1440px) / 2 * -1);
+
+            padding-left: calc((101vw - 1440px) / 2 );
+            padding-right: calc((101vw - 1440px) / 2 );
         }
     }
 }

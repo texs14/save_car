@@ -30,7 +30,11 @@
     }
 
     &__button {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
 
         width: 50%;
         height: 40px;

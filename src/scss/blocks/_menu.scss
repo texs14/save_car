@@ -8,13 +8,14 @@
     transition: 0.8s;
 
 
-    &__item {
+    li {
         display: flex;
         margin-right: 34px;
         height: 100%;
         &:last-child {
             margin-right: 0;
         }
+
     }
     &__link {
         display: flex;
@@ -28,6 +29,11 @@
         line-height: 24px;
         color: black;
         cursor: pointer;
+        
+        &-active {
+            font-weight: bold;
+        }
+        
         &-phone {
             font-weight: bold;
             color: #43404e;
