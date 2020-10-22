@@ -8,7 +8,7 @@ import PopupCalc from './js/components/PopupCalc';
 import PopupService from './js/components/PopupService';
 
 
-import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo} from './js/constants/constants';
+import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo, burger} from './js/constants/constants';
 
 
 const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
@@ -31,9 +31,9 @@ popupOsago.addEventListener('click', e => {
 
 
 
-buttonMenu.addEventListener('click', e => {
+burger.addEventListener('click', e => {
     menu.classList.toggle('menu__open');
-    buttonMenu.classList.toggle('button-menu__open');
+    burger.classList.toggle('active');
 });
 
 
@@ -62,3 +62,6 @@ card.addEventListener('click', e => {
 popupInfo.addEventListener('click', e => {
     popupService.hidden();
 });
+
+    
+console.log(popupInfo);

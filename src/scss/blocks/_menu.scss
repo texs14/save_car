@@ -102,6 +102,7 @@
             color: rgb(211, 211, 211);
             &-phone {
                 &::before {
+                    display: none;
                     background: url('./images/icon-mobail-phone.png') center / 100%;
                 }
             }
