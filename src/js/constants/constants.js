@@ -9,6 +9,7 @@ const menu = document.querySelector('.menu');
 const buttonCalcOsago = document.querySelector('.calc__button_osago');
 const popupOsago = document.querySelector('.popup-calc');
 const popupInfo = document.querySelector('.popup');
+const burger = document.querySelector('.ham');
 
 const REG_EXS = {
     email: new RegExp(/^([a-zA-Z\d][-_.]?[a-zA-Z\d]*)+@([A-Za-z\d]+[-_.]?[a-z\d]*)+\.[a-z]{2,}$/),
@@ -34,5 +35,6 @@ export {
     menu,
     buttonCalcOsago,
     popupOsago,
-    popupInfo
+    popupInfo,
+    burger
     };
