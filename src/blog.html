@@ -26,9 +26,9 @@
         </nav>
     </header>
     <main class="content">
-
         <div class="post">
             
+            <a href="<?php echo wp_get_referer(); ?>" class="post__go-back">&larr;Вернуться назад</a>
             <h2 class="post__title">Как застраховать гараж</h2>
             <article>
                 <p>Владелец имеет полное право застраховать свой гараж, находящийся как на собственном земельном участке, так и расположенный в общем гаражном кооперативе. Однако большинство компаний защищают только «капитальные» сооружения, имеющие фундамент, стены и крышу. Многие СК требуют также документ на право собственности.
@@ -50,6 +50,18 @@
                     <p class="comment-form-comment">
                         <label>Комментарий</label>
                         <textarea id="comment"></textarea>
+                    </p>
+                    <p class="comment-form-author">
+                        <label >Имя <span class="required">*</span></label>
+                        <input id="author" type="text">
+                    </p>
+                    <p class="comment-form-email">
+                        <label>Емайл <span class="required">*</span></label>
+                        <input type="text">
+                    </p>
+                    <p class="comment-form-url">
+                        <label >Сайт</label>
+                        <input type="text">
                     </p>
                     <p class="form-submit">
                         <input class="submit" type="submit" value="Отправить комментарий"/>

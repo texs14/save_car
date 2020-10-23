@@ -96,6 +96,10 @@
             }
         }
 
+        &__textarea {
+            box-sizing: border-box;
+        }
+
         &__input {
             order: 2;
             width: 100%;

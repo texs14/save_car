@@ -18,6 +18,12 @@
     }
 
     &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+
         margin:  30px 0;
         min-width: 350px;
         height: 40px;
