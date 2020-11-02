@@ -46,7 +46,7 @@
     }
 }
 
-.post {
+.post-content {
 
     margin: auto;
 
@@ -149,7 +149,7 @@
         padding-right: calc((101vw - 1350px) / 2 );
     }
 
-    .post {
+    .post-content {
         position: relative;
         .comment-respond {
             width: 100vw;
@@ -168,7 +168,7 @@
         flex-flow: column;
     }
     
-    .post {
+    .post-content {
         .comment-respond {
             padding: 100px 30px;
             
@@ -207,7 +207,7 @@
         }
     }
 
-    .post {
+    .post-content {
 
         p{
             padding: 0 12px;

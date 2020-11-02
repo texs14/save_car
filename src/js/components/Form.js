@@ -49,7 +49,6 @@ export default class Form {
     }
 
     requireInput() {
-        console.log(labelEmail);
         this._form.call.addEventListener('input', e => {
             if(this._form.call.checked) {
                 labelEmail.classList.remove('require');

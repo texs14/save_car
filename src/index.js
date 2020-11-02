@@ -4,64 +4,36 @@ import './index.scss';
 
 import './vendor/mySwiper';
 import Form from './js/components/Form';
-import PopupCalc from './js/components/PopupCalc';
-import PopupService from './js/components/PopupService';
 
 
-import {formFeedback, ERRORS_MASSEGE, REG_EXS, buttonMenu, menu, buttonCalcOsago, popupOsago, popupInfo, burger} from './js/constants/constants';
+import {formFeedback, ERRORS_MASSEGE, REG_EXS, menu, burger} from './js/constants/constants';
 
 
 const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
-const popupCalc = new PopupCalc(popupOsago);
-const popupService = new PopupService(popupInfo);
+console.log('1')
+let menuOpen = false;
+console.log('2')
 
 form.send();
+console.log('13')
 form.requireInput();
-
-
-buttonCalcOsago.addEventListener('click', e => {
-    popupCalc.show();
-});
-
-popupOsago.addEventListener('click', e => {
-    if(e.target.classList.value === `popup` || `popup__content`) {
-        popupCalc.hidden();
-    }
-});
-
-
+console.log('14')
 
 burger.addEventListener('click', e => {
-    menu.classList.toggle('menu__open');
-    burger.classList.toggle('active');
-});
-
-
-const card = document.querySelector('.swiper-wrapper');
-
-
-card.addEventListener('click', e => {
-    if (e.target.type === `submit`) {
-        switch (e.target.closest('div').id) {
-            case 'serviceCardRestoration' :
-                popupService.open();
-                break;
-            case 'serviceCardSaveAuto' :
-                alert(2);
-                break;
-            case 'serviceCardSaveHouse' :
-                alert(3);
-                break;
-            case '' :
-                break;
-        }
+    if(menuOpen) {
+        menu.classList.toggle('menu__open');
+    } else {
+        menu.classList.toggle('menu__open');
+        menu.classList.add('menu__close');
     }
-    // popupService._renderContent(e);
+    burger.classList.toggle('active');
+    menuOpen = !menuOpen;
 });
 
-popupInfo.addEventListener('click', e => {
-    popupService.hidden();
-});
+console.log('15')
 
-    
-console.log(popupInfo);
+document.addEventListener('scroll', () => {
+    menu.classList.remove('menu__open');
+    burger.classList.remove('active');
+});
+console.log('156')

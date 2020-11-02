@@ -4,43 +4,42 @@
 }
 
 .calc-iframe {
-    width: 100%;
-    min-height: 936px;
+    min-height: 1380px;
     border: none;
 }
 
 
 @media(max-width: 685px) {
     .calc-iframe {
-        min-height: 1150px;
+        min-height: 1645px;
     }
     
 }
 
 @media(max-width: 590px) {
     .calc-iframe {
-        min-height: 1180px;
+        min-height: 1680px;
     }
     
 }
 
 @media(max-width: 540px) {
     .calc-iframe {
-        min-height: 1220px;
+        min-height: 1780px;
     }
     
 }
 
 @media(max-width: 450px) {
     .calc-iframe {
-        min-height: 1290px;
+        min-height: 1835px;
     }
     
 }
 
 @media(max-width: 380px) {
     .calc-iframe {
-        min-height: 1380px;
+        min-height: 1900px;
     }
     
 }

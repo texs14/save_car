@@ -7,3 +7,13 @@
         color: rgb(173, 0, 144);
     }
 }
+
+@media(max-width: 550px) {
+    .require {
+        &::after {
+            position: absolute;
+            top: -13px;
+            left: -25px;
+        }
+    }
+}

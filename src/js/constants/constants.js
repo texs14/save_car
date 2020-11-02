@@ -4,11 +4,7 @@ const errorMassegePhone = document.querySelector('#error-phone');
 const errorMassegeEmail = document.querySelector('#error-email');
 const labelEmail = document.querySelector('#labelEmail');
 const labelPhone = document.querySelector('#labelPhone');
-const buttonMenu = document.querySelector('.button-menu');
 const menu = document.querySelector('.menu');
-const buttonCalcOsago = document.querySelector('.calc__button_osago');
-const popupOsago = document.querySelector('.popup-calc');
-const popupInfo = document.querySelector('.popup');
 const burger = document.querySelector('.ham');
 
 const REG_EXS = {
@@ -31,10 +27,6 @@ export {
     errorMassegeEmail,
     labelEmail,
     labelPhone,
-    buttonMenu,
     menu,
-    buttonCalcOsago,
-    popupOsago,
-    popupInfo,
     burger
     };
