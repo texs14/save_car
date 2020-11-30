@@ -38,10 +38,53 @@
     </header>
     <main class="content">
 
-        <h1 class="calc-title">Калькулятор</h1>
+<!--        <h1 class="calc-title">Калькулятор</h1>-->
 
-        <iframe class="calc-iframe" style="width: 100vw" src="https://cpamotor.ru/osago_calc?data-host=xn--80aegtqibcljl2b.xn--p1ai&data-webmaster-id=Ud8YbU&data-version=2">
-        </iframe>
+<!--        <iframe class="calc-iframe" style="width: 100vw" src="https://cpamotor.ru/osago_calc?data-host=xn&#45;&#45;80aegtqibcljl2b.xn&#45;&#45;p1ai&data-webmaster-id=Ud8YbU&data-version=2">-->
+<!--        </iframe>-->
+        <section class="posts-list">
+
+            <div class="post">
+                <img src="<?php the_post_thumbnail_url();?>" alt="картинка поста" class="post__img"/>
+                <div class="post__wrapper-text">
+                    <h2 class="post__title"><?php the_title();?></h2>
+                    <p class="post__paragraph"> <?php the_field('blogs_descr'); ?></p>
+                    <a href="<?php the_permalink();?>" class="post__link">Читать далее...</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="<?php the_post_thumbnail_url();?>" alt="картинка поста" class="post__img"/>
+                <div class="post__wrapper-text">
+                    <h2 class="post__title"><?php the_title();?></h2>
+                    <p class="post__paragraph"> <?php the_field('blogs_descr'); ?></p>
+                    <a href="<?php the_permalink();?>" class="post__link">Читать далее...</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="<?php the_post_thumbnail_url();?>" alt="картинка поста" class="post__img"/>
+                <div class="post__wrapper-text">
+                    <h2 class="post__title"><?php the_title();?></h2>
+                    <p class="post__paragraph"> <?php the_field('blogs_descr'); ?></p>
+                    <a href="<?php the_permalink();?>" class="post__link">Читать далее...</a>
+                </div>
+            </div>
+
+            <nav class="navigation pagination" role="navigation">
+                <div class="nav-links">
+                    <a class="next page-numbers" href="http://wptest.ru/page/2/"><<</a>
+                    <span class="page-numbers current">1</span>
+                    <a class="page-numbers" href="http://wptest.ru/page/2/">2</a>
+                    <span class="page-numbers dots">…</span>
+                    <a class="page-numbers" href="http://wptest.ru/page/86/">86</a>
+                    <a class="page-numbers" href="http://wptest.ru/page/87/">87</a>
+                    <a class="next page-numbers" href="http://wptest.ru/page/2/">>></a>
+                </div>
+            </nav>
+        </section>
+
+
         <!-- <div class="post-content">
             
             <a href="<?php echo wp_get_referer(); ?>" class="post-content__go-back">&larr;Вернуться назад</a>

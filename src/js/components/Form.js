@@ -19,9 +19,10 @@ export default class Form {
                     method: 'POST',
                     body:  new FormData(this._form)
                 })
-                .then(res => console.log('Сообщение отправлено'))
-                .catch(err => console.log(err));
+                .then(res => alert('Сообщение отправлено'))
+                .catch(err => alert(err));
                 this._form.reset();
+                this._inputsResetError();
             }
         });
     }                
