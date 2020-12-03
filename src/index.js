@@ -10,14 +10,10 @@ import {formFeedback, ERRORS_MASSEGE, REG_EXS, menu, burger} from './js/constant
 
 
 const form = new Form(formFeedback, ERRORS_MASSEGE, REG_EXS);
-console.log('1')
 let menuOpen = false;
-console.log('2')
 
 form.send();
-console.log('13')
 form.requireInput();
-console.log('14')
 
 burger.addEventListener('click', e => {
     if(menuOpen) {
@@ -30,10 +26,8 @@ burger.addEventListener('click', e => {
     menuOpen = !menuOpen;
 });
 
-console.log('15')
 
 document.addEventListener('scroll', () => {
     menu.classList.remove('menu__open');
     burger.classList.remove('active');
 });
-console.log('156')
